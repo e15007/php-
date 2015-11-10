@@ -1,12 +1,15 @@
 <?php
-$m=array("眠くないですか","おはようこざいます","こんにちは","こんばんは");
+//$m=array("眠くないですか","おはようこざいます","こんにちは","こんばんは");
+$m= array("yonaka" => "眠くないですか",
+"asa" => "お早うございます",
+"hiru" =>"こんにちは",
+"yoru" =>"こんばんは");
 $hour= date("G");
+var_dump($hour);
 if ($hour>=18) {
-    print $m[3];
+    print $m["yoru"];
 }elseif($hour>=9){
-    print $m[2];
+    print $m["hiru"];
 }elseif($hour>=6){
-    print $m[1];
-}else{
-    print $m[0];
-}
+    print $m["asa"];
+ }
